@@ -1,0 +1,99 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: inform path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_rdv
+  - action: utter_ask_rdv
+  - intent: give_date
+  - action: action_save_time
+  - action: utter_confirm_date
+
+- story: inform path 2
+  steps:
+  - intent: provide_name
+  - action: action_save_name
+  - intent: ask_rdv
+  - action: utter_inform_provide_name1
+  - intent: give_date
+  - action: action_save_time
+  - action: utter_confirm_date
+
+- story: ask for price path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_price
+  - action: utter_ask_for_price
+
+- story: ask for time
+  steps:
+  
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_for_time
+  - action: utter_ask_for_time
+
+- story: capture name
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: provide_name
+    - action: action_save_name
+    - action: utter_provide_name
+  
+- story: ask for price blanchissement
+  steps:
+    - intent: ask_for_price_blanchissement
+    - action: utter_ask_for_price_blanchissement
+
+- story: ask for price extraction
+  steps:
+    - intent: ask_for_price_extraction
+    - action: utter_ask_for_price_extraction
+
+- story: ask for service
+  steps:
+    - intent: services_offerts
+    - action: utter_services_offerts
+    - intent: ask_for_price_blanchissement
+    - action: utter_ask_for_price_blanchissement
+
+- story: ask for service 2
+  steps:
+    - intent: services_offerts
+    - action: utter_services_offerts
+    - intent: ask_for_price_extraction
+    - action: utter_ask_for_price_extraction
+    - intent: ask_for_price_blanchissement
+    - action: utter_ask_for_price_blanchissement

@@ -1,0 +1,109 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_rdv
+  - ask_for_price
+  - provide_name
+  - ask_for_time
+  - ask_for_price_blanchissement
+  - ask_for_price_extraction
+  - services_offerts
+  - give_date
+  
+
+actions:
+  - utter_greet
+  - utter_provide_name
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_ask_rdv
+  - utter_ask_for_price
+  - action_save_name  # Ajoutez cette ligne
+  - utter_inform_provide_name1
+  - utter_ask_for_time
+  - utter_ask_for_price_blanchissement
+  - utter_services_offerts
+  - utter_confirm_date
+  - action_save_time
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_provide_name:
+    - text: "Bonjour {name}! Comment puis-je vous aider ?"
+
+  utter_inform_provide_name1:
+    - text: "Super! Bienvenue , dans quelle date vous voulez prendre rendez-vous ? (veuillez entrer la date exemple : 30/08/2024 à 11h30)"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_ask_rdv:
+    - text: "Oui Bienvenue, Veuillez entrer la date que vous conviendra (exemple : 30/12/2024 à 10h )"
+
+  utter_ask_for_price:
+    - text: "it's about 1500 $"
+
+  utter_ask_for_time:
+    - text: "Bien sur , voici les horaires de notre cabinet : de Lundi à Jeudi de 9h00 à 16h , et le Vendredi de 9h00 à midi"
+  
+  utter_ask_for_price_blanchissement:
+  - text: "Pour le blanchissement dentaire, le prix varie généralement entre 500DHs et 700DHs selon le cas. Ce prix peut varier en fonction de divers facteurs tels que la méthode de blanchiment utilisée, la durée du traitement et d'autres considérations. Souhaitez-vous plus de détails sur les prix ou avez-vous d'autres questions?"
+  
+  utter_ask_for_price_extraction:
+  - text: "Pour une extraction dentaire, le prix varie généralement entre 200DHs et 300DHs. Cela dépendra de divers facteurs, y compris la complexité de l'extraction et le traitement post-opératoire nécessaire. Souhaitez-vous plus de détails sur les prix ou avez-vous d'autres questions?"
+  
+  utter_services_offerts:
+  - text: "Notre cabinet dentaire propose une gamme complète de services, notamment les nettoyages dentaires, les obturations, les extractions dentaires, les traitements de canal, les couronnes et les ponts dentaires, les implants dentaires, les prothèses dentaires, les traitements de blanchiment et bien plus encore. Si vous avez des questions spécifiques sur nos services ou si vous souhaitez prendre rendez-vous, n'hésitez pas à demander!"
+
+  utter_confirm_date:
+    - text: "Votre rendez-vous a été confirmé le {time}. Nous avons hâte de vous voir!"
+
+
+entities : 
+ - name 
+ - time 
+
+slots:
+  name:
+    type: text
+    influence_conversation:
+    mappings:
+      - type: from_text
+        entity : name
+  time:
+    type: text
+    mappings:
+      - type: from_text
+        entity : time
+    
+      
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

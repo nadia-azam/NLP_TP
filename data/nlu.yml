@@ -1,0 +1,172 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Bonjour
+    - Bonsoir 
+    - Salut
+    - Salam
+    - Cc
+    - cc
+    - Ahlan
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Oui, je suis intéressé.
+    - Oui, cela me convient.
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_rdv
+  examples: |
+    - Je voudrais prendre un rendez-vous.
+    - Je veux avoir un rendez-vous
+    - j'ai besoin d'un rendez-vous
+    - Vous pouvez me prendre un rendez-vous
+    - Je veux fixer un rendez-vous
+    - Tu peux me donner un rendez-vous
+    - Donne moi rendez-vous
+
+- intent: ask_for_price
+  examples: |
+    - Combien ça coûte  ?
+    - Quel est le prix ?
+    - Pouvez-vous me donner une estimation du coût  ?
+    - Pouvez-vous me donner une estimation de prix  ?
+
+- intent: ask_for_price_blanchissement
+  examples: |
+    - Combien ça coûte le blanchissement ?
+    - Quel est le prix de blanchissement des dents ?
+    - Pouvez-vous me donner une estimation du coût de blanchissement des dents ?
+    - Pouvez-vous me donner une estimation de prix de blanchissement des dents ?
+    - Et le blanchissement ?
+    - Meme chose pour le blanchissement ?
+
+- intent: ask_for_price_extraction
+  examples: |
+    - Combien ça coûte l'extraction des dents ?
+    - Quel est le prix d'extraction' des dents ?
+    - Pouvez-vous me donner une estimation du coût d'extraction des dents ?
+    - Pouvez-vous me donner une estimation de prix d'extraction des dents ?
+    - Et l'extraction ?
+    - Meme chose pour l'extraction ?
+    
+
+- intent: ask_for_time
+  examples: |
+    - Quels sont vos horaires d'ouverture ?
+    - Vous ouvriez a quelle heure ?
+    - Donne moi l'horaire de vos ouverture ?
+    
+
+- intent: provide_name
+  examples: |
+    - Je m'appelle [Jean](name)
+    - Mon nom est [Paul](name)
+    - Mon nom est [Nadia](name)
+    - Je suis [Nadia](name)
+    - Je suis [hind](name)
+    - mon nom est [Nadia](name)
+    - je suis [hind](name)
+
+- intent: services_offerts
+  examples: |
+    - Quels services proposez-vous ?
+    - Quels sont les traitements disponibles ?
+    - Pouvez-vous me dire quels services vous offrez ?
+    - Quels types de traitements dentaires proposez-vous ?
+    - Quels sont les services disponibles dans votre cabinet ?
+    - Pouvez-vous m'informer sur les services offerts ?
+    - Qu'est-ce que vous proposez comme services ?
+    - Quels services sont disponibles ?
+
+- intent: give_date
+  examples: |
+    - [30/08/2024 à 11h30](time)
+    - [10/04/2024 à 10h](time)
+    - [15/05/2024 à 15h](time)
+    - [le 20/06/2024 à 9h](time)
+    - [le 25/07/2024 à 14h](time)

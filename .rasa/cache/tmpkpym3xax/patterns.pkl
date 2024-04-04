@@ -1,0 +1,22 @@
+[
+  {
+    "name": "time",
+    "pattern": "10/04/2024 à 10h matin"
+  },
+  {
+    "name": "time",
+    "pattern": "15/05/2024 à 15h"
+  },
+  {
+    "name": "time",
+    "pattern": "20/06/2024 à 9h"
+  },
+  {
+    "name": "time",
+    "pattern": "le 25/07/2024 à 14h"
+  },
+  {
+    "name": "time",
+    "pattern": "le 30/08/2024 à 11h30"
+  }
+]
